@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryNiOdin</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="headertitle"><h1>LibraryNiOdin</h1></div>
+            <span class="count"></span>
+        </div>
+        <div class="addform">
+        <div class="addformtitle">Add book</div>
+        <form action="" class="form">
+            <div class="formrow">
+                <label for="title" class="newtitle">Title:
+                    <input type="text" class="newtitle" id="title">
+                </label>
+            </div>
+            <div class="formrow">
+                <label for="author" class="newauthor">Author:
+                    <input type="text" class="newauthor" id="author">
+                </label>
+            </div>
+            <div class="formrow">
+                <label for="pages" class="pages">Pages:
+                    <input type="number" class="pages" id="pages" pattern="[0-9]{4}">
+                </label>
+            </div>
+            <div class="formrow">
+                <label for="read" class="read">Read:
+                    <label for="yes" class="read">yes<input type="radio" name="read" id="yes"></label>
+                    <label for="no" class="read">no<input type="radio" name="read" id="no"></label>
+                </label>
+            </div>
+            <button class="add">Add to library</button>
+        </form>
+        </div>
+        <div class="shelf">
+            <div class="shelftitle">Shelf</div>
+        </div>
+    </div>
+</body>
+</html>
