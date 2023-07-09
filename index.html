@@ -14,34 +14,36 @@
         </div>
         <div class="addform">
         <div class="addformtitle">Add book</div>
-        <form action="" class="form">
+        <form action="" class="form" id="form">
             <div class="formrow">
                 <label for="title" class="newtitle">Title:
-                    <input type="text" class="newtitle" id="title">
+                    <input type="text" class="newtitle" id="title" minlength="5" maxlength="30">
                 </label>
             </div>
             <div class="formrow">
                 <label for="author" class="newauthor">Author:
-                    <input type="text" class="newauthor" id="author">
+                    <input type="text" class="newauthor" id="author" minlength="5" maxlength="50">
                 </label>
             </div>
             <div class="formrow">
                 <label for="pages" class="pages">Pages:
-                    <input type="number" class="pages" id="pages" pattern="[0-9]{4}">
+                    <input type="number" class="pages" id="pages" pattern="[0-9]{1,4}">
                 </label>
             </div>
             <div class="formrow">
-                <label for="read" class="read">Read:
-                    <label for="yes" class="read">yes<input type="radio" name="read" id="yes"></label>
-                    <label for="no" class="read">no<input type="radio" name="read" id="no"></label>
-                </label>
+                <div class="read">Read:</div>
+                        <label for="yes" class="read">yes<input type="radio" name="read" id="yes" value="true"></label>
+                        <label for="no" class="read">no<input type="radio" name="read" id="no" value="false"></label>
+                                        </label>
             </div>
-            <button class="add">Add to library</button>
+            <input type="submit" class="add" value="Add a book">
         </form>
         </div>
         <div class="shelf">
             <div class="shelftitle">Shelf</div>
+            <div class="bookshelf" id="bookshelf"></div>
         </div>
     </div>
 </body>
+<script src="library.js"></script>
 </html>

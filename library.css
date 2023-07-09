@@ -4,6 +4,7 @@ body{
 }
 .container{
 height: 100vh;
+width: 100vw;
 display: grid;
 grid-template: 1fr 7fr / 1fr 1fr;
 gap: min(10px,1vw);
@@ -13,20 +14,31 @@ gap: min(10px,1vw);
     background-color: rgb(9, 21, 46);
     box-shadow: 2px 2px 3px -1px;
 }
-label, .headertitle, .addformtitle, .shelftitle{
+label, .headertitle, .addformtitle, .shelftitle, div.read{
     color: white;
     font-weight: bold;
 }
+.addform{
+
+    grid-area: 2/1/3/2;
+
+}
+
 .formrow{
     margin: 10px;
     padding: 0px 5vw;
+    width: min(30vw,600px);
     display: flex;
     justify-content: center;
+    flex: 0;
 }
+
+
 .addformtitle, .shelftitle{
     font-size: 1.5rem;
-    margin: 1rem;
+    padding: 1rem 0px;
 }
+
 .header{
     grid-area: 1/1/2/3;
  
@@ -36,14 +48,13 @@ text-align: center;
 }
 
 form{
-    grid-area: 2/1/3/2;
     width: auto;
     display: flex;
     padding: 10px;
     flex-direction: column;
 
 }
-label{
+label,div.read{
     font-size: 1rem;
     float:right;
     flex: 1;
@@ -57,16 +68,51 @@ input[type="number"]
     flex: 1;
     border: 2px black solid;
 }
-label>label.read  {
+label>div.read  {
     margin-left: 10px;
 }
-button.add{
+label.read{
+    margin-left: min(100px,2vw);
+}
+.add, button{
     align-self: center;
     border-radius: 5px;
     font-size: 1rem;
-    border: 2px solid black
+    border: 1px solid black;
+    margin-right: min(10px,1vw);
+
 }
 .shelf{
     grid-area: 2/2/3/3;
+    overflow: auto;
+    position: relative;
 
+
+}
+.shelftitle, .addformtitle, .addform{
+    border-bottom: solid white 2px;
+
+}
+.shelftitle{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 21, 46);
+    position: sticky;
+    top: 0;
+}
+.bookshelf{
+    display: grid;
+    grid-auto-rows: 220px;
+}
+div.bookshelf>div{
+    padding: 10px;
+    color: white;
+    border-bottom: solid white 2px;
+    padding-left: 5vw;
+}
+p{
+    text-transform: capitalize;
+}
+button:hover, .add:hover{
+    border-width: 3px;
 }
