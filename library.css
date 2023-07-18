@@ -11,11 +11,11 @@ gap: min(10px,1vw);
 
 }
 .header, .addform, .shelf{
-    background-color: rgb(9, 21, 46);
+    background-color: rgb(202, 205, 207);
     box-shadow: 2px 2px 3px -1px;
 }
 label, .headertitle, .addformtitle, .shelftitle, div.read{
-    color: white;
+    color: #2e2d2d;
     font-weight: bold;
 }
 .addform{
@@ -90,13 +90,13 @@ label.read{
 
 }
 .shelftitle, .addformtitle, .addform{
-    border-bottom: solid white 2px;
+    border-bottom: solid gray 2px;
 
 }
 .shelftitle{
     display: flex;
     justify-content: center;
-    background-color: rgb(9, 21, 46);
+    background-color: rgb(202, 205, 207);
     position: sticky;
     top: 0;
 }
@@ -106,8 +106,8 @@ label.read{
 }
 div.bookshelf>div{
     padding: 10px;
-    color: white;
-    border-bottom: solid white 2px;
+    color: #2e2d2d;
+    border-bottom: solid gray 2px;
     padding-left: 5vw;
 }
 p{
